@@ -1,5 +1,4 @@
-Description:
-============
+# Description:
 
 A tiny Python script to expand or "desugar" Haskell do blocks. 
 
@@ -10,19 +9,16 @@ intention of expanding the functionality later.
 As of now, the capabilities are very limited. Most notably,
 you cannot use pure code in the do blocks (such as let statements). 
 
-Dependencies:
-=============
+## Dependencies:
 
 [Pyparsing](http://pyparsing.wikispaces.com/)
 
-Usage:
-=====
+## Usage:
 
 Provide the do block as the first (and only) command line argument. 
 If no arguments are provided, you will be prompted for input.
 
-Examples:
-========
+## Examples:
 
 do { x1 <- eval x; x2 <- eval y; safediv x1 x2 } gives
 eval x >>= (\x1 -> eval y >>= (\x2 -> safediv x1 x2))
