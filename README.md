@@ -20,13 +20,13 @@ If no arguments are provided, you will be prompted for input.
 
 ## Examples
 
-do { x1 <- eval x; x2 <- eval y; safediv x1 x2 } gives
+do { x1 <- eval x; x2 <- eval y; safediv x1 x2 } ==>  
 eval x >>= (\x1 -> eval y >>= (\x2 -> safediv x1 x2))
 
-do { x <- xs; y <- ys; return (x,y) } gives
+do { x <- xs; y <- ys; return (x,y) } ==>  
 xs >>= (\x -> ys >>= (\y -> return (x,y)))
 
-do { x <- getChar ; y <- getChar; print [x,y]; return True } gives
+do { x <- getChar ; y <- getChar; print [x,y]; return True } ==>  
 getChar >>= (\x -> getChar >>= (\y -> print [x,y] >> return True))
 
 
