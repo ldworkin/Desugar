@@ -35,7 +35,3 @@ if __name__ == "__main__":
         print desugar(raw_input("Enter a do block: "))
     else:
         print desugar(sys.argv[1])
-    
-
-
-
