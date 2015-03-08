@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import sys
 from pyparsing import *
 
@@ -31,12 +29,13 @@ def desugar(string):
     except ParseException:
         return "Bad syntax."
 
-if len(sys.argv) < 2:
-    print desugar(raw_input("Enter a do block: "))
-else:
-    print desugar(sys.argv[1])
 
-
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print desugar(raw_input("Enter a do block: "))
+    else:
+        print desugar(sys.argv[1])
+    
 
 
 
